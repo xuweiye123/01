@@ -1,0 +1,1953 @@
+<html lang="zh-CN" class="translated-ltr"><head>
+    <meta http-equiv="content-type">
+    <title>模版预览：579a00001</title>
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="/res/jrfcms_mobi/css/preview.css">
+<!-- <link rel="stylesheet" href="/pt/css/common.css"/> -->
+<link rel="stylesheet" href="/pt/css/base.css?v=20201210">
+<link rel="stylesheet" href="/pt/css/swiper.min.css?v=20201210">
+<link rel="stylesheet" href="/gw/css/animate.min.css?v=20201210">
+<link rel="stylesheet" href="/pt/css/modules.css?v=20201210">
+<script type="text/javascript" src="/pt/js/jquery-1.8.3.min.js?v=20201210"></script>
+<script type="text/javascript" src="/pt/js/common.js?v=20201210"></script>
+<script type="text/javascript" src="/pt/js/swiper.min.js?v=20201210"></script>
+<script type="text/javascript" src="/pt/js/rotatetxt.js?v=20201210"></script>
+<script type="text/javascript" src="/pt/js/lottie.min.js?v=20201210"></script>
+<script type="text/javascript" src="/res/common/js/stat.js?v=20201210"></script>
+    <style type="text/css">
+        <!--
+        body {
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            overflow: hidden;
+        }
+        -->
+    </style>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css"></head>
+<body>
+<script>
+    var hashStr = window.location.hash;
+    var umstate ;
+    try{
+        umstate =  hashStr.match(/(?:#umstate=)([^&=]+)/)[1];
+        if(umstate){
+            document.cookie="umstate="+umstate+";path=/";
+        }
+    }catch(e){}
+</script>
+<script>
+    var loginSuccessCallBackFun ;
+    /**
+     * 校验会员是否登录
+     * @returns {boolean}
+     */
+    function checkLogin(){
+        var loginFlag = false;
+
+        $.ajax({
+            type:'post',
+            async:false,
+            url:'/member_login_status.jspx?t='+new Date().getTime(),
+            success:function(data){
+                if(data.status==1){
+                    loginFlag = true;
+                }
+            }
+        });
+        return loginFlag;
+    }
+    /**
+     * 查看是否登录，并弹出登录窗口
+     * */
+    function checkLoginAndAlertLoginPop(){
+        var loginFlag =checkLogin();
+        if(!loginFlag){
+            //校验是手机还是pc
+            if(IsPC()){
+                lodingHtml("login");
+            }else{
+                window.location.href = "/mucenter/login.jspx";
+            }
+        }
+        return loginFlag;
+    }
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"];
+        var flag = true;
+        for (var i = 0; i < Agents.length; i++) {
+            if (userAgentInfo.indexOf(Agents[i]) !=-1) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    /**
+     * 查看是否登录，并弹出登录窗口
+     * */
+    function checkLoginAndAlertStore(){
+        var loginFlag =checkLogin();
+        if(!loginFlag){
+            lodingHtml("register");
+        }else{
+            window.location.href="/ucenter/purchase/productAllList.jspx"
+        }
+      
+    }
+
+    function lodingHtml(showType){
+
+        $.ajax({
+            url: '/r_member/loginhtml.jspx',
+            data:{"showType":showType},
+            type: 'post',
+            success: function(data){
+              $("body").append(data);
+            }
+        });
+    }
+
+
+    /**
+     * 查看是否登录，未登陆弹出注册窗口 ，登陆则跳转地址
+     * */
+    function checkLoginAndOpenUrl(url,target){
+        var loginFlag =checkLogin();
+        if(!loginFlag){
+            lodingHtml("register");
+        }else{
+            if(target){
+                window.open(url,target)
+            }else{
+                window.location.href=url
+            }
+        }
+
+    }
+
+    function getQueryVariable(variable)
+    {
+        if(window.location.search){
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i=0;i<vars.length;i++) {
+                var pair = vars[i].split("=");
+                if(pair[0] == variable){return pair[1];}
+            }
+        }
+        return(false);
+    }
+    $(function(){
+        //检测连接是否带参数,带参数 则弹出登录页面
+        if(document.location.search.search('showLoginProp=1')!=-1){
+            checkLoginAndAlertLoginPop();
+        }
+        var formCoupon = getQueryVariable("formCoupon");
+        if(formCoupon){
+            document.cookie="formCoupon="+formCoupon+";path=/";
+        }
+    })
+
+</script>
+
+
+<div id="previewTop" class="preview_top new-preview">
+    <div class="preview_content">
+        <div class="industry_detail fl">
+            <div class="industry_hd">
+                <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编号：</font></font><span id="serialNo"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">579a00001</font></font></span></span>
+                <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所属行业：旅游</font></font></span>
+            </div>
+            <div id="moreModules" class="more_modules" style="display: none; top: -500px;">
+                <div class="modules_content">
+                    <div id="selectContent" class="select_content">
+                        <ul>
+                            <li>
+                                <a industryid="10501" href="https://lvyou07-mb.126net.cn/" onclick="showTemp(this,'https://lvyou07-mb.126net.cn/','10501','579a00001')" title="579a00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/579a00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="9337" href="https://lvyou06-mb.126net.cn/" onclick="showTemp(this,'https://lvyou06-mb.126net.cn/','9337','370b00001')" title="370b00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/370b00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="9076" href="https://lvyou03-mb.126net.cn/" onclick="showTemp(this,'https://lvyou03-mb.126net.cn/','9076','251b00001')" title="251b00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/251b00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="9033" href="https://lvyou02-mb.126net.cn/" onclick="showTemp(this,'https://lvyou02-mb.126net.cn/','9033','238d00001')" title="238d00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/238d00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="8912" href="https://lvyou01-mb.126net.cn/" onclick="showTemp(this,'https://lvyou01-mb.126net.cn/','8912','202a00001')" title="202a00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/202a00001.jpg" alt=""><span></span></a>
+                                </li><li>
+                                <a industryid="5756" href="https://ljn-mb.126net.cn/" onclick="showTemp(this,'https://ljn-mb.126net.cn/','5756','39d00001')" title="39d00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/39d00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="9334" href="https://lvyou05-mb.126net.cn/" onclick="showTemp(this,'https://lvyou05-mb.126net.cn/','9334','369d00001')" title="369d00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/369d00001.jpg" alt=""><span></span></a>
+                                </li>
+                    </ul>
+                </div>
+                <div class="preview_buts">
+                    <a href="#" class="leftbut"></a>
+                    <a href="#" class="rightbut"></a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="versions_icons fr">
+            <span></span>
+            <a href="/mb/index.jhtml"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更多模板</font></font></a>
+        </div>
+        <div class="modules_page">
+            <a href="javascript:void(0);" class="disable" onclick="tempGoPage(this,1,-1)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上一个</font></font></a>
+            <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1/7</font></font></span>
+            <a href="javascript:void(0);" onclick="tempGoPage(this,1,1)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下一个</font></font></a>
+        </div>
+        <div class="versions_icons">
+            <input type="hidden" id="industryId" value="10501">
+            <!-- <a class="collect_template" href="javascript:void(0);" onclick=""><b></b>收藏</a> -->
+            <a href="javascript:void(0);" class="pc_icon version_current hidden" onclick="phoneShow(this);" a-name="sourceWeb"><i class="i-ico i-pc"></i><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PC版效果</font></font></em></a>
+            <a href="javascript:void(0);" class="phone_icon" onclick="phoneShow(this);" a-name="previewPhoneDiv"><i class="i-ico i-mobile"></i><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">手机版效果</font></font></em></a>
+            <a class="copy_template select-use" href="javascript:void(0);" onclick="previewUseMb()"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">精选此模板</font></font></a>
+        </div>
+    </div>
+</div>
+
+<div style="position: absolute;top:0;left:0;right:0;bottom: 0;margin: auto;">
+<iframe name="sourceWeb" id="sourceWeb" src="https://lvyou07-mb.126net.cn/" width="100%" height="100%" frameborder="no" border="0" marginwidth="0" marginheight="0" allowtransparency="yes"></iframe>
+
+
+
+<div id="previewPhoneDiv" class="preview_phone">
+    <div class="phone_code">
+        <div id="PhoneCode" data-href="https://lvyou07-mb.126net.cn//mIndex.jsp?serialNo=579a00001&amp;previewPhone=true" title="https://lvyou07-mb.126net.cn//mIndex.jsp?serialNo=579a00001&amp;previewPhone=true">
+            <p class="code_tip"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扫一扫二维码，手机预览</font></font></p>
+        <canvas width="160" height="160" style="display: none;"></canvas><img src="data:image/png;base64,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" style="display: block;"></div>
+    </div>
+    <iframe id="mobiReviewPageFrame" name="mobiReviewPageFrame" frameborder="0" width="100%" height="100%" scrolling="yes" src1="https://lvyou07-mb.126net.cn//mIndex.jsp?serialNo=579a00001&amp;previewPhone=true"></iframe>
+</div>
+</div>
+
+<!-- 新增选用 -->
+<div class="popbg"></div>
+<div class="popwin noselect-pop popwin-nobottom" id="replaceApp">
+    <div class="pop-head">
+        <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建站模板选择性</font></font></h4>
+        <a href="javascript:void(0);" class="popclose" onclick="cancelPop(this);"></a>
+    </div>
+    <div class="pop-main">
+        <div class="pop-inner">
+            <p class="temp-yy-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您希望将“</font></font><span id="templateName"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">餐饮498b00001</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ”替换到以下该站点：</font></font></p>
+            <div class="clearfix temp-yy">
+                <div class="left-temp">
+                    <div class="temp-titletip"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">新站点</font></font></div>
+                    <div>
+                        <div class="myapp_bdleft ">
+                            <div class="my_apptest_box">
+                               <img class="my_apptest" src="/pt/images/apptest_default.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="b-btn b-orange" href="Javascript:void(0)" onclick="openPayProduct();"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">应用到新的站点 </font></font><i class="i-ico"></i></a>
+                </div>
+                <div class="right-temp">
+                    <div class="temp-titletip"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">现有站点</font></font></div>
+                    <div>
+                        <div class="myapp_bdleft ">
+                            <div class="my_apptest_box">
+                               <img class="my_apptest" id="solImg" src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="b-btn" href="Javascript:void(0)" id="oneAppBtn" onclick="replaceTemplate();"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更换到现有站点 </font></font><i class="i-ico"></i></a>
+                    <a class="b-btn" href="Javascript:void(0)" id="multiAppBtn" onclick="showMultiApp();"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更换到现有站点 </font></font><i class="i-ico"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-bottom">
+        <input type="hidden" name="industryId" id="industryId">
+        <input type="hidden" name="maId" id="maIdHid">
+        <input type="hidden" name="businessId" id="businessId">
+        <input type="hidden" name="ssoLoginInterface" id="ssoLoginInterface">
+        <input id="appId" name="appId" type="hidden" value="21">
+    </div>
+</div>
+<div class="popwin selecttemp-pop popwin-nobottom" id="multiApp">
+    <div class="pop-head">
+        <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建站模板选择性</font></font></h4>
+        <a href="javascript:void(0);" class="popclose" onclick="cancelPop(this);"></a>
+    </div>
+    <div class="pop-main">
+        <div class="pop-inner">
+            <p class="selectable-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您当前有</font></font><span id="appCount"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">个站点，可以更换此模板，请选择：</font></font></p>
+            <ul class="selectable-template ">
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function cancelPop(obj){
+        $(".popbg").hide();
+        $(obj).parents(".popwin").hide();
+    }
+
+    function useMb(industryId,trimSerialNo,parentName){
+
+        if(checkLoginAndAlertLoginPop()){
+            $("#templateName").html(parentName+" "+trimSerialNo);
+            $("#industryId").val(industryId);
+            var appId = $("#appId").val();
+            // 获取当前用户自助建站应用列表
+            $(".popbg").show();
+            $.ajax({
+                type : 'post',
+                url : '/ucenter/memberApp/getZzjzApp.jspx',
+                data:{"appId":appId},
+                error : function(e){
+                    $(".popbg").hide();
+                },
+                success : function(data){
+                    if(data.count > 0 ){
+                        $("#ssoLoginInterface").val(data.ssoLoginInterface);
+                        if(data.count > 1){
+                            $("#appCount").html(data.count);
+                            $("#multiApp").find(".selectable-template").empty();
+                            var appHtml = generateAppHtml(data);
+                            $("#multiApp").find(".selectable-template").html(appHtml);
+                            $("#oneAppBtn").hide();
+                            $("#multiAppBtn").show();
+                        }else{
+                            $("#oneAppBtn").show();
+                            $("#multiAppBtn").hide();
+                        }
+
+                        $("#maIdHid").val(data.list[0].maId);
+                        $("#businessId").val(data.list[0].businessId);
+
+                        var defImg = "/r/system/100a00001/img/zizhujianzhan.png";
+                        var solImg = defImg;
+                        if( data.list[0].tplSol){
+                            solImg = 'https://jrfcms-mb.126net.cn/res/jrfcms/img/tpltheme/'+data.list[0].tplSol+'.jpg';
+                        }
+                        $("#solImg").attr("src",solImg);
+                        $("#replaceApp").show();
+                    }else{
+                        $(".popbg").hide();
+                        openPayProduct();
+                    }
+                }
+            });
+        }
+    }
+    function generateAppHtml(data){
+        var html = '';
+        var defImg = "/r/system/100a00001/img/zizhujianzhan.png";
+        var appId = $("#appId").val();
+        for(var i=0;i<data.list.length;i++){
+            var app = data.list[i];
+
+            html += '<li maIdHid="'+app.maId+'"  businessId="'+app.businessId+'">\n' +
+            '                    <div class="temp-inner clearfix">\n' +
+            // '                        <i class="i-ico i-cur"></i>\n' +
+            '                        <div class="imgbox">' +
+            '                           <div class="myapp_bdleft ">'+
+            '                               <div class="my_apptest_box">';
+            if(appId==21){
+                var solImg = defImg;
+                if(app.tplSol){
+                    solImg = 'https://jrfcms-mb.126net.cn/res/jrfcms/img/tpltheme/'+app.tplSol+'.jpg';
+                }
+                html +=
+                    '                                   <img class="my_apptest" src="'+solImg+'" alt="" />' ;
+            }else if(appId==241){
+                solImg = "/r/system/100a00001/img/qr_code_336.png";
+                if(app.manageUrl){
+                    solImg =app.manageUrl;
+                }
+                html +=
+                    '                                   <img class="my_apptest my_applet" src="'+solImg+'" alt="" />' ;
+            }
+
+            html+=
+            '                                </div>\n' +
+            '                           </div>\n' +
+            '                        </div>\n' +
+            '                        <div class="txtbox">\n' +
+            '                           <p class="temp-name">应用名称：'+app.name+'</p>\n' ;
+            if(appId==21){
+            html +=
+            '                           <p class="temp-name">站点域名：'+app.domain+'</p>\n' +
+            '                           <p class="temp-name">语言版本：中文版'+app.languageZh+'</p>\n' ;
+            }else if(appId==241){
+                var username = app.username?app.username:"";
+
+                html +=
+                    '                           <p class="temp-name">后台账号：'+username+'</p>\n' +
+                    '                           <p class="temp-name">管理地址：https://wxapp.126ego.com/store/login.do</p>\n' ;
+            }
+            html+=
+            '                           <p class="temp-name"><button class="b-btn b-orange" onclick="selectApp(this)"><span>立即更换模版</span><i class="i-ico"></i></button></p>\n' +
+            '                        </div>\n' +
+            '                    </div>\n' +
+
+            '                </li>'
+        }
+        return html;
+    }
+
+    function showMultiApp(){
+        $("#multiApp").show();
+        $("#replaceApp").hide();
+    }
+
+    function selectApp(obj){
+        var maIdHid = $(obj).parents("li").attr("maIdHid")
+        var businessId = $(obj).parents("li").attr("businessId")
+        $("#maIdHid").val(maIdHid);
+        $("#businessId").val(businessId);
+        replaceTemplate();
+    }
+
+    function replaceTemplate(){
+        var maId = $("#maIdHid").val();
+        var ssoLoginInterface = $("#ssoLoginInterface").val();
+        var businessId = $("#businessId").val();
+        $.ajax({
+            type: "POST",
+            async:false,
+            url: "/ucenter/memberApp/o_getUcenterTicket.jspx",
+            data: {"maId": maId},
+            success: function(result) {
+                if(result){
+                    var industryId = $("#industryId").val();
+                    var appId = $("#appId").val();
+                    var url = ssoLoginInterface+"?businessId="+businessId+"&token="+result;
+                    if(appId ==21){
+                        url +="&returnUrl=/index.jhtml%3FindustryId="+industryId;
+                    }else if(appId==241){
+                        url +="&tplMark="+industryId;
+                    }else if(appId==321){
+                        url +="&tplMark="+industryId;
+                    }else if(appId==322){
+                        url +="&tplMark="+industryId;
+                    }
+                    window.open(url);
+                }
+            }
+        });
+
+    }
+
+    function hbUseMb(industryId){
+        $("#industryId").val(industryId);
+        if(checkLoginAndAlertLoginPop()){
+            openPayProduct();
+        }
+    }
+
+    function openPayProduct(){
+        var appId = $("#appId").val();
+
+        var url;
+        if(appId ==21){
+            url = "/product/productDetails.jhtml?pvIds=627,382,387&pvId=627";
+        }else if(appId==241){
+            url = "/product/productDetails.jhtml?pvIds=601,583&pvId=601";
+        }else if(appId==321){
+            url = "/product/productDetails.jhtml?pvIds=761";
+        }else if(appId==322){
+            url = "/product/productDetails.jhtml?pvIds=762";
+        }
+        var industryId = $("#industryId").val();
+        url += "&industryId="+industryId;
+        window.open(url);
+    }
+
+</script>
+<div class="active_pop_bg" style="display: none;"></div>
+    <div class="active_pop_big" style="display: none;">
+        <i class="active_pop_close" onclick="closeActive(this);"></i>
+        <a href="http://www.ruiyi126.com/ryzxhd/index.jhtml"><img src="/pt/images/template/template_popbig.png" alt=""></a>
+    </div>
+    <div class="active_pop_small c-show">
+        <a href="javascript:void(0);" onclick="openActive(this);"><img src="/pt/images/template/template_popsmall.png" alt=""></a>
+    </div>
+<script src="/r/system/100a00001/js/qrcode.js"></script>
+<script>
+    $(function(){
+        var qrcode = new QRCode(document.getElementById("PhoneCode"), {
+            width : 160,
+            height : 160
+        });
+
+        qrcode.makeCode($("#PhoneCode").attr("data-href"));
+
+        init();
+        // 模板更多下拉
+        // $("#previewTop .industry_detail").mouseenter(function(){
+        //     $("#moreModules").stop().show().animate({
+        //         "top":"50px"
+        //     },300);
+        // });
+        // $("#previewTop .industry_detail").mouseleave(function(){
+        //     selectSlideUp();
+        // });
+
+
+    });
+    function showTemp(obj,domain,industryId,serialNo){
+        $("#industryId").val(industryId);
+        $("#serialNo").html(serialNo);
+
+        $("#selectContent li a").removeClass('a_checked');
+        $(obj).addClass("a_checked");
+
+        var mobiUrl = domain+"/mIndex.jsp?serialNo="+serialNo+"&previewPhone=true";
+        $("#mobiReviewPageFrame").attr("src1",mobiUrl);
+        $("#mobiReviewPageFrame").attr("src",mobiUrl);
+
+        $("#PhoneCode").find("img").remove();
+        $("#PhoneCode").find("canvas").remove();
+        var qrcode = new QRCode(document.getElementById("PhoneCode"), {
+            width : 160,
+            height : 160
+        });
+        qrcode.makeCode(mobiUrl);
+
+        selectSlideUp();
+
+    }
+
+    //手机版显示
+    function phoneShow(obj) {
+        $(obj).addClass("hidden").siblings().removeClass("hidden");
+        var nameshow = $(obj).attr("a-name");
+        var nameshow1 = $(obj).siblings('[a-name]').attr("a-name");
+        $(obj).addClass("version_current").siblings().removeClass("version_current");
+        $('#'+nameshow).show();
+        $('#'+nameshow1).hide();
+        if(nameshow == 'previewPhoneDiv'){
+            var src = $("#mobiReviewPageFrame").attr("src");
+            if(!src){
+                src = $("#mobiReviewPageFrame").attr("src1");
+                $("#mobiReviewPageFrame").attr("src",src);
+            }
+        }
+    }
+
+    function previewUseMb(){
+        var industryId = $("#industryId").val();
+        var serialNo = $("#serialNo").html();
+        useMb(industryId,serialNo,'旅游');
+    }
+
+
+
+    function selectSlideUp(){
+        $("#moreModules").stop().animate({
+            "top":'-500'
+        },300,function(){
+            $("#moreModules").hide()
+        });
+    }
+    function init(){
+        var nowimg = 0;
+        var i = $("#selectContent li").length;
+        $("#moreModules").on("click",".rightbut",function(){
+            if(!$("#selectContent ul").is(":animated")){
+                if(nowimg<i-1){
+                    nowimg ++;
+                }
+                $("#selectContent ul").animate({
+                    "left":-1000*nowimg
+                },1000);
+            }
+        });
+        $("#moreModules").on("click",".leftbut",function(){
+            var i = parseInt($("#selectContent li").length/5);
+            if(!$("#selectContent ul").is(":animated")){
+                if(nowimg>0){
+                    nowimg --;
+                }
+                $("#selectContent ul").animate({
+                    "left":-1000*nowimg
+                },1000);
+            }
+        });
+
+    }
+
+    function tempGoPage(obj,currentNum,flag){
+        if(!$(obj).hasClass("disable")){
+
+            var industryId ;
+            if(flag == 1){
+                industryId = $("#selectContent").find("ul li a").eq(currentNum-1).next().attr("industryId");
+            }else{
+                industryId = $("#selectContent").find("ul li a").eq(currentNum-1).prev().attr("industryId");
+            }
+
+            window.location.href="/view_design/v_modelPreview.jspx?industryId="+industryId;
+        }
+    }
+
+// 瑞蚁助学弹窗
+ $(function(){
+        var closeActive = getCookie("activeRYZX");
+        if(closeActive!="hide"){
+            // $(".active_pop_bg").show();
+            // $(".active_pop_big").show();
+            // $(".active_pop_small").hide();
+        }else{
+            $(".active_pop_bg").hide();
+            $(".active_pop_big").hide();
+            $(".active_pop_small").show();
+        }
+    })
+    function getCookie(cookie_name)
+    {
+        var allcookies = document.cookie;
+        var cookie_pos = allcookies.indexOf(cookie_name);   //索引的长度
+      
+        // 如果找到了索引，就代表cookie存在，
+        // 反之，就说明不存在。
+        if (cookie_pos != -1)
+        {
+            // 把cookie_pos放在值的开始，只要给值加1即可。
+            cookie_pos += cookie_name.length + 1;      //这里容易出问题，所以请大家参考的时候自己好好研究一下
+            var cookie_end = allcookies.indexOf(";", cookie_pos);
+      
+            if (cookie_end == -1)
+            {
+                cookie_end = allcookies.length;
+            }
+      
+            var value = unescape(allcookies.substring(cookie_pos, cookie_end));         //这里就可以得到你想要的cookie的值了。。。
+        }
+        return value;
+    }
+    function openActive(obj){
+        var d = new Date();
+        d.setTime(d.getTime() + (30*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie="activeRYZX=show;" + expires + ";path=/";
+        $(".active_pop_bg").show();
+            $(".active_pop_big").show();
+            $(".active_pop_small").hide();
+    }
+
+    function closeActive(obj){
+        var d = new Date();
+        d.setTime(d.getTime() + (30*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie="activeRYZX=hide;" + expires + ";path=/";
+        $(".active_pop_bg").hide();
+            $(".active_pop_big").hide();
+            $(".active_pop_small").show();
+    }
+</script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google 翻译"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">原文</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">提供更好的翻译建议</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
+<head>
+    <meta http-equiv="content-type">
+    <title>模版预览：579a00001</title>
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="/res/jrfcms_mobi/css/preview.css">
+<!-- <link rel="stylesheet" href="/pt/css/common.css"/> -->
+<link rel="stylesheet" href="/pt/css/base.css?v=20201210">
+<link rel="stylesheet" href="/pt/css/swiper.min.css?v=20201210">
+<link rel="stylesheet" href="/gw/css/animate.min.css?v=20201210">
+<link rel="stylesheet" href="/pt/css/modules.css?v=20201210">
+<script type="text/javascript" src="/pt/js/jquery-1.8.3.min.js?v=20201210"></script>
+<script type="text/javascript" src="/pt/js/common.js?v=20201210"></script>
+<script type="text/javascript" src="/pt/js/swiper.min.js?v=20201210"></script>
+<script type="text/javascript" src="/pt/js/rotatetxt.js?v=20201210"></script>
+<script type="text/javascript" src="/pt/js/lottie.min.js?v=20201210"></script>
+<script type="text/javascript" src="/res/common/js/stat.js?v=20201210"></script>
+    <style type="text/css">
+        <!--
+        body {
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            overflow: hidden;
+        }
+        -->
+    </style>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css"></head>
+<body>
+<script>
+    var hashStr = window.location.hash;
+    var umstate ;
+    try{
+        umstate =  hashStr.match(/(?:#umstate=)([^&=]+)/)[1];
+        if(umstate){
+            document.cookie="umstate="+umstate+";path=/";
+        }
+    }catch(e){}
+</script>
+<script>
+    var loginSuccessCallBackFun ;
+    /**
+     * 校验会员是否登录
+     * @returns {boolean}
+     */
+    function checkLogin(){
+        var loginFlag = false;
+
+        $.ajax({
+            type:'post',
+            async:false,
+            url:'/member_login_status.jspx?t='+new Date().getTime(),
+            success:function(data){
+                if(data.status==1){
+                    loginFlag = true;
+                }
+            }
+        });
+        return loginFlag;
+    }
+    /**
+     * 查看是否登录，并弹出登录窗口
+     * */
+    function checkLoginAndAlertLoginPop(){
+        var loginFlag =checkLogin();
+        if(!loginFlag){
+            //校验是手机还是pc
+            if(IsPC()){
+                lodingHtml("login");
+            }else{
+                window.location.href = "/mucenter/login.jspx";
+            }
+        }
+        return loginFlag;
+    }
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"];
+        var flag = true;
+        for (var i = 0; i < Agents.length; i++) {
+            if (userAgentInfo.indexOf(Agents[i]) !=-1) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    /**
+     * 查看是否登录，并弹出登录窗口
+     * */
+    function checkLoginAndAlertStore(){
+        var loginFlag =checkLogin();
+        if(!loginFlag){
+            lodingHtml("register");
+        }else{
+            window.location.href="/ucenter/purchase/productAllList.jspx"
+        }
+      
+    }
+
+    function lodingHtml(showType){
+
+        $.ajax({
+            url: '/r_member/loginhtml.jspx',
+            data:{"showType":showType},
+            type: 'post',
+            success: function(data){
+              $("body").append(data);
+            }
+        });
+    }
+
+
+    /**
+     * 查看是否登录，未登陆弹出注册窗口 ，登陆则跳转地址
+     * */
+    function checkLoginAndOpenUrl(url,target){
+        var loginFlag =checkLogin();
+        if(!loginFlag){
+            lodingHtml("register");
+        }else{
+            if(target){
+                window.open(url,target)
+            }else{
+                window.location.href=url
+            }
+        }
+
+    }
+
+    function getQueryVariable(variable)
+    {
+        if(window.location.search){
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i=0;i<vars.length;i++) {
+                var pair = vars[i].split("=");
+                if(pair[0] == variable){return pair[1];}
+            }
+        }
+        return(false);
+    }
+    $(function(){
+        //检测连接是否带参数,带参数 则弹出登录页面
+        if(document.location.search.search('showLoginProp=1')!=-1){
+            checkLoginAndAlertLoginPop();
+        }
+        var formCoupon = getQueryVariable("formCoupon");
+        if(formCoupon){
+            document.cookie="formCoupon="+formCoupon+";path=/";
+        }
+    })
+
+</script>
+
+
+<div id="previewTop" class="preview_top new-preview">
+    <div class="preview_content">
+        <div class="industry_detail fl">
+            <div class="industry_hd">
+                <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编号：</font></font><span id="serialNo"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">579a00001</font></font></span></span>
+                <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所属行业：旅游</font></font></span>
+            </div>
+            <div id="moreModules" class="more_modules" style="display: none; top: -500px;">
+                <div class="modules_content">
+                    <div id="selectContent" class="select_content">
+                        <ul>
+                            <li>
+                                <a industryid="10501" href="https://lvyou07-mb.126net.cn/" onclick="showTemp(this,'https://lvyou07-mb.126net.cn/','10501','579a00001')" title="579a00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/579a00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="9337" href="https://lvyou06-mb.126net.cn/" onclick="showTemp(this,'https://lvyou06-mb.126net.cn/','9337','370b00001')" title="370b00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/370b00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="9076" href="https://lvyou03-mb.126net.cn/" onclick="showTemp(this,'https://lvyou03-mb.126net.cn/','9076','251b00001')" title="251b00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/251b00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="9033" href="https://lvyou02-mb.126net.cn/" onclick="showTemp(this,'https://lvyou02-mb.126net.cn/','9033','238d00001')" title="238d00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/238d00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="8912" href="https://lvyou01-mb.126net.cn/" onclick="showTemp(this,'https://lvyou01-mb.126net.cn/','8912','202a00001')" title="202a00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/202a00001.jpg" alt=""><span></span></a>
+                                </li><li>
+                                <a industryid="5756" href="https://ljn-mb.126net.cn/" onclick="showTemp(this,'https://ljn-mb.126net.cn/','5756','39d00001')" title="39d00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/39d00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="9334" href="https://lvyou05-mb.126net.cn/" onclick="showTemp(this,'https://lvyou05-mb.126net.cn/','9334','369d00001')" title="369d00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/369d00001.jpg" alt=""><span></span></a>
+                                </li>
+                    </ul>
+                </div>
+                <div class="preview_buts">
+                    <a href="#" class="leftbut"></a>
+                    <a href="#" class="rightbut"></a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="versions_icons fr">
+            <span></span>
+            <a href="/mb/index.jhtml"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更多模板</font></font></a>
+        </div>
+        <div class="modules_page">
+            <a href="javascript:void(0);" class="disable" onclick="tempGoPage(this,1,-1)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上一个</font></font></a>
+            <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1/7</font></font></span>
+            <a href="javascript:void(0);" onclick="tempGoPage(this,1,1)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下一个</font></font></a>
+        </div>
+        <div class="versions_icons">
+            <input type="hidden" id="industryId" value="10501">
+            <!-- <a class="collect_template" href="javascript:void(0);" onclick=""><b></b>收藏</a> -->
+            <a href="javascript:void(0);" class="pc_icon version_current hidden" onclick="phoneShow(this);" a-name="sourceWeb"><i class="i-ico i-pc"></i><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PC版效果</font></font></em></a>
+            <a href="javascript:void(0);" class="phone_icon" onclick="phoneShow(this);" a-name="previewPhoneDiv"><i class="i-ico i-mobile"></i><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">手机版效果</font></font></em></a>
+            <a class="copy_template select-use" href="javascript:void(0);" onclick="previewUseMb()"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">精选此模板</font></font></a>
+        </div>
+    </div>
+</div>
+
+<div style="position: absolute;top:0;left:0;right:0;bottom: 0;margin: auto;">
+<iframe name="sourceWeb" id="sourceWeb" src="https://lvyou07-mb.126net.cn/" width="100%" height="100%" frameborder="no" border="0" marginwidth="0" marginheight="0" allowtransparency="yes"></iframe>
+
+
+
+<div id="previewPhoneDiv" class="preview_phone">
+    <div class="phone_code">
+        <div id="PhoneCode" data-href="https://lvyou07-mb.126net.cn//mIndex.jsp?serialNo=579a00001&amp;previewPhone=true" title="https://lvyou07-mb.126net.cn//mIndex.jsp?serialNo=579a00001&amp;previewPhone=true">
+            <p class="code_tip"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扫一扫二维码，手机预览</font></font></p>
+        <canvas width="160" height="160" style="display: none;"></canvas><img src="data:image/png;base64,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" style="display: block;"></div>
+    </div>
+    <iframe id="mobiReviewPageFrame" name="mobiReviewPageFrame" frameborder="0" width="100%" height="100%" scrolling="yes" src1="https://lvyou07-mb.126net.cn//mIndex.jsp?serialNo=579a00001&amp;previewPhone=true"></iframe>
+</div>
+</div>
+
+<!-- 新增选用 -->
+<div class="popbg"></div>
+<div class="popwin noselect-pop popwin-nobottom" id="replaceApp">
+    <div class="pop-head">
+        <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建站模板选择性</font></font></h4>
+        <a href="javascript:void(0);" class="popclose" onclick="cancelPop(this);"></a>
+    </div>
+    <div class="pop-main">
+        <div class="pop-inner">
+            <p class="temp-yy-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您希望将“</font></font><span id="templateName"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">餐饮498b00001</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ”替换到以下该站点：</font></font></p>
+            <div class="clearfix temp-yy">
+                <div class="left-temp">
+                    <div class="temp-titletip"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">新站点</font></font></div>
+                    <div>
+                        <div class="myapp_bdleft ">
+                            <div class="my_apptest_box">
+                               <img class="my_apptest" src="/pt/images/apptest_default.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="b-btn b-orange" href="Javascript:void(0)" onclick="openPayProduct();"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">应用到新的站点 </font></font><i class="i-ico"></i></a>
+                </div>
+                <div class="right-temp">
+                    <div class="temp-titletip"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">现有站点</font></font></div>
+                    <div>
+                        <div class="myapp_bdleft ">
+                            <div class="my_apptest_box">
+                               <img class="my_apptest" id="solImg" src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="b-btn" href="Javascript:void(0)" id="oneAppBtn" onclick="replaceTemplate();"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更换到现有站点 </font></font><i class="i-ico"></i></a>
+                    <a class="b-btn" href="Javascript:void(0)" id="multiAppBtn" onclick="showMultiApp();"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更换到现有站点 </font></font><i class="i-ico"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-bottom">
+        <input type="hidden" name="industryId" id="industryId">
+        <input type="hidden" name="maId" id="maIdHid">
+        <input type="hidden" name="businessId" id="businessId">
+        <input type="hidden" name="ssoLoginInterface" id="ssoLoginInterface">
+        <input id="appId" name="appId" type="hidden" value="21">
+    </div>
+</div>
+<div class="popwin selecttemp-pop popwin-nobottom" id="multiApp">
+    <div class="pop-head">
+        <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建站模板选择性</font></font></h4>
+        <a href="javascript:void(0);" class="popclose" onclick="cancelPop(this);"></a>
+    </div>
+    <div class="pop-main">
+        <div class="pop-inner">
+            <p class="selectable-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您当前有</font></font><span id="appCount"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">个站点，可以更换此模板，请选择：</font></font></p>
+            <ul class="selectable-template ">
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function cancelPop(obj){
+        $(".popbg").hide();
+        $(obj).parents(".popwin").hide();
+    }
+
+    function useMb(industryId,trimSerialNo,parentName){
+
+        if(checkLoginAndAlertLoginPop()){
+            $("#templateName").html(parentName+" "+trimSerialNo);
+            $("#industryId").val(industryId);
+            var appId = $("#appId").val();
+            // 获取当前用户自助建站应用列表
+            $(".popbg").show();
+            $.ajax({
+                type : 'post',
+                url : '/ucenter/memberApp/getZzjzApp.jspx',
+                data:{"appId":appId},
+                error : function(e){
+                    $(".popbg").hide();
+                },
+                success : function(data){
+                    if(data.count > 0 ){
+                        $("#ssoLoginInterface").val(data.ssoLoginInterface);
+                        if(data.count > 1){
+                            $("#appCount").html(data.count);
+                            $("#multiApp").find(".selectable-template").empty();
+                            var appHtml = generateAppHtml(data);
+                            $("#multiApp").find(".selectable-template").html(appHtml);
+                            $("#oneAppBtn").hide();
+                            $("#multiAppBtn").show();
+                        }else{
+                            $("#oneAppBtn").show();
+                            $("#multiAppBtn").hide();
+                        }
+
+                        $("#maIdHid").val(data.list[0].maId);
+                        $("#businessId").val(data.list[0].businessId);
+
+                        var defImg = "/r/system/100a00001/img/zizhujianzhan.png";
+                        var solImg = defImg;
+                        if( data.list[0].tplSol){
+                            solImg = 'https://jrfcms-mb.126net.cn/res/jrfcms/img/tpltheme/'+data.list[0].tplSol+'.jpg';
+                        }
+                        $("#solImg").attr("src",solImg);
+                        $("#replaceApp").show();
+                    }else{
+                        $(".popbg").hide();
+                        openPayProduct();
+                    }
+                }
+            });
+        }
+    }
+    function generateAppHtml(data){
+        var html = '';
+        var defImg = "/r/system/100a00001/img/zizhujianzhan.png";
+        var appId = $("#appId").val();
+        for(var i=0;i<data.list.length;i++){
+            var app = data.list[i];
+
+            html += '<li maIdHid="'+app.maId+'"  businessId="'+app.businessId+'">\n' +
+            '                    <div class="temp-inner clearfix">\n' +
+            // '                        <i class="i-ico i-cur"></i>\n' +
+            '                        <div class="imgbox">' +
+            '                           <div class="myapp_bdleft ">'+
+            '                               <div class="my_apptest_box">';
+            if(appId==21){
+                var solImg = defImg;
+                if(app.tplSol){
+                    solImg = 'https://jrfcms-mb.126net.cn/res/jrfcms/img/tpltheme/'+app.tplSol+'.jpg';
+                }
+                html +=
+                    '                                   <img class="my_apptest" src="'+solImg+'" alt="" />' ;
+            }else if(appId==241){
+                solImg = "/r/system/100a00001/img/qr_code_336.png";
+                if(app.manageUrl){
+                    solImg =app.manageUrl;
+                }
+                html +=
+                    '                                   <img class="my_apptest my_applet" src="'+solImg+'" alt="" />' ;
+            }
+
+            html+=
+            '                                </div>\n' +
+            '                           </div>\n' +
+            '                        </div>\n' +
+            '                        <div class="txtbox">\n' +
+            '                           <p class="temp-name">应用名称：'+app.name+'</p>\n' ;
+            if(appId==21){
+            html +=
+            '                           <p class="temp-name">站点域名：'+app.domain+'</p>\n' +
+            '                           <p class="temp-name">语言版本：中文版'+app.languageZh+'</p>\n' ;
+            }else if(appId==241){
+                var username = app.username?app.username:"";
+
+                html +=
+                    '                           <p class="temp-name">后台账号：'+username+'</p>\n' +
+                    '                           <p class="temp-name">管理地址：https://wxapp.126ego.com/store/login.do</p>\n' ;
+            }
+            html+=
+            '                           <p class="temp-name"><button class="b-btn b-orange" onclick="selectApp(this)"><span>立即更换模版</span><i class="i-ico"></i></button></p>\n' +
+            '                        </div>\n' +
+            '                    </div>\n' +
+
+            '                </li>'
+        }
+        return html;
+    }
+
+    function showMultiApp(){
+        $("#multiApp").show();
+        $("#replaceApp").hide();
+    }
+
+    function selectApp(obj){
+        var maIdHid = $(obj).parents("li").attr("maIdHid")
+        var businessId = $(obj).parents("li").attr("businessId")
+        $("#maIdHid").val(maIdHid);
+        $("#businessId").val(businessId);
+        replaceTemplate();
+    }
+
+    function replaceTemplate(){
+        var maId = $("#maIdHid").val();
+        var ssoLoginInterface = $("#ssoLoginInterface").val();
+        var businessId = $("#businessId").val();
+        $.ajax({
+            type: "POST",
+            async:false,
+            url: "/ucenter/memberApp/o_getUcenterTicket.jspx",
+            data: {"maId": maId},
+            success: function(result) {
+                if(result){
+                    var industryId = $("#industryId").val();
+                    var appId = $("#appId").val();
+                    var url = ssoLoginInterface+"?businessId="+businessId+"&token="+result;
+                    if(appId ==21){
+                        url +="&returnUrl=/index.jhtml%3FindustryId="+industryId;
+                    }else if(appId==241){
+                        url +="&tplMark="+industryId;
+                    }else if(appId==321){
+                        url +="&tplMark="+industryId;
+                    }else if(appId==322){
+                        url +="&tplMark="+industryId;
+                    }
+                    window.open(url);
+                }
+            }
+        });
+
+    }
+
+    function hbUseMb(industryId){
+        $("#industryId").val(industryId);
+        if(checkLoginAndAlertLoginPop()){
+            openPayProduct();
+        }
+    }
+
+    function openPayProduct(){
+        var appId = $("#appId").val();
+
+        var url;
+        if(appId ==21){
+            url = "/product/productDetails.jhtml?pvIds=627,382,387&pvId=627";
+        }else if(appId==241){
+            url = "/product/productDetails.jhtml?pvIds=601,583&pvId=601";
+        }else if(appId==321){
+            url = "/product/productDetails.jhtml?pvIds=761";
+        }else if(appId==322){
+            url = "/product/productDetails.jhtml?pvIds=762";
+        }
+        var industryId = $("#industryId").val();
+        url += "&industryId="+industryId;
+        window.open(url);
+    }
+
+</script>
+<div class="active_pop_bg" style="display: none;"></div>
+    <div class="active_pop_big" style="display: none;">
+        <i class="active_pop_close" onclick="closeActive(this);"></i>
+        <a href="http://www.ruiyi126.com/ryzxhd/index.jhtml"><img src="/pt/images/template/template_popbig.png" alt=""></a>
+    </div>
+    <div class="active_pop_small c-show">
+        <a href="javascript:void(0);" onclick="openActive(this);"><img src="/pt/images/template/template_popsmall.png" alt=""></a>
+    </div>
+<script src="/r/system/100a00001/js/qrcode.js"></script>
+<script>
+    $(function(){
+        var qrcode = new QRCode(document.getElementById("PhoneCode"), {
+            width : 160,
+            height : 160
+        });
+
+        qrcode.makeCode($("#PhoneCode").attr("data-href"));
+
+        init();
+        // 模板更多下拉
+        // $("#previewTop .industry_detail").mouseenter(function(){
+        //     $("#moreModules").stop().show().animate({
+        //         "top":"50px"
+        //     },300);
+        // });
+        // $("#previewTop .industry_detail").mouseleave(function(){
+        //     selectSlideUp();
+        // });
+
+
+    });
+    function showTemp(obj,domain,industryId,serialNo){
+        $("#industryId").val(industryId);
+        $("#serialNo").html(serialNo);
+
+        $("#selectContent li a").removeClass('a_checked');
+        $(obj).addClass("a_checked");
+
+        var mobiUrl = domain+"/mIndex.jsp?serialNo="+serialNo+"&previewPhone=true";
+        $("#mobiReviewPageFrame").attr("src1",mobiUrl);
+        $("#mobiReviewPageFrame").attr("src",mobiUrl);
+
+        $("#PhoneCode").find("img").remove();
+        $("#PhoneCode").find("canvas").remove();
+        var qrcode = new QRCode(document.getElementById("PhoneCode"), {
+            width : 160,
+            height : 160
+        });
+        qrcode.makeCode(mobiUrl);
+
+        selectSlideUp();
+
+    }
+
+    //手机版显示
+    function phoneShow(obj) {
+        $(obj).addClass("hidden").siblings().removeClass("hidden");
+        var nameshow = $(obj).attr("a-name");
+        var nameshow1 = $(obj).siblings('[a-name]').attr("a-name");
+        $(obj).addClass("version_current").siblings().removeClass("version_current");
+        $('#'+nameshow).show();
+        $('#'+nameshow1).hide();
+        if(nameshow == 'previewPhoneDiv'){
+            var src = $("#mobiReviewPageFrame").attr("src");
+            if(!src){
+                src = $("#mobiReviewPageFrame").attr("src1");
+                $("#mobiReviewPageFrame").attr("src",src);
+            }
+        }
+    }
+
+    function previewUseMb(){
+        var industryId = $("#industryId").val();
+        var serialNo = $("#serialNo").html();
+        useMb(industryId,serialNo,'旅游');
+    }
+
+
+
+    function selectSlideUp(){
+        $("#moreModules").stop().animate({
+            "top":'-500'
+        },300,function(){
+            $("#moreModules").hide()
+        });
+    }
+    function init(){
+        var nowimg = 0;
+        var i = $("#selectContent li").length;
+        $("#moreModules").on("click",".rightbut",function(){
+            if(!$("#selectContent ul").is(":animated")){
+                if(nowimg<i-1){
+                    nowimg ++;
+                }
+                $("#selectContent ul").animate({
+                    "left":-1000*nowimg
+                },1000);
+            }
+        });
+        $("#moreModules").on("click",".leftbut",function(){
+            var i = parseInt($("#selectContent li").length/5);
+            if(!$("#selectContent ul").is(":animated")){
+                if(nowimg>0){
+                    nowimg --;
+                }
+                $("#selectContent ul").animate({
+                    "left":-1000*nowimg
+                },1000);
+            }
+        });
+
+    }
+
+    function tempGoPage(obj,currentNum,flag){
+        if(!$(obj).hasClass("disable")){
+
+            var industryId ;
+            if(flag == 1){
+                industryId = $("#selectContent").find("ul li a").eq(currentNum-1).next().attr("industryId");
+            }else{
+                industryId = $("#selectContent").find("ul li a").eq(currentNum-1).prev().attr("industryId");
+            }
+
+            window.location.href="/view_design/v_modelPreview.jspx?industryId="+industryId;
+        }
+    }
+
+// 瑞蚁助学弹窗
+ $(function(){
+        var closeActive = getCookie("activeRYZX");
+        if(closeActive!="hide"){
+            // $(".active_pop_bg").show();
+            // $(".active_pop_big").show();
+            // $(".active_pop_small").hide();
+        }else{
+            $(".active_pop_bg").hide();
+            $(".active_pop_big").hide();
+            $(".active_pop_small").show();
+        }
+    })
+    function getCookie(cookie_name)
+    {
+        var allcookies = document.cookie;
+        var cookie_pos = allcookies.indexOf(cookie_name);   //索引的长度
+      
+        // 如果找到了索引，就代表cookie存在，
+        // 反之，就说明不存在。
+        if (cookie_pos != -1)
+        {
+            // 把cookie_pos放在值的开始，只要给值加1即可。
+            cookie_pos += cookie_name.length + 1;      //这里容易出问题，所以请大家参考的时候自己好好研究一下
+            var cookie_end = allcookies.indexOf(";", cookie_pos);
+      
+            if (cookie_end == -1)
+            {
+                cookie_end = allcookies.length;
+            }
+      
+            var value = unescape(allcookies.substring(cookie_pos, cookie_end));         //这里就可以得到你想要的cookie的值了。。。
+        }
+        return value;
+    }
+    function openActive(obj){
+        var d = new Date();
+        d.setTime(d.getTime() + (30*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie="activeRYZX=show;" + expires + ";path=/";
+        $(".active_pop_bg").show();
+            $(".active_pop_big").show();
+            $(".active_pop_small").hide();
+    }
+
+    function closeActive(obj){
+        var d = new Date();
+        d.setTime(d.getTime() + (30*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie="activeRYZX=hide;" + expires + ";path=/";
+        $(".active_pop_bg").hide();
+            $(".active_pop_big").hide();
+            $(".active_pop_small").show();
+    }
+</script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google 翻译"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">原文</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">提供更好的翻译建议</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body>
+<html lang="zh-CN" class="translated-ltr"><head>
+    <meta http-equiv="content-type">
+    <title>模版预览：579a00001</title>
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="/res/jrfcms_mobi/css/preview.css">
+<!-- <link rel="stylesheet" href="/pt/css/common.css"/> -->
+<link rel="stylesheet" href="/pt/css/base.css?v=20201210">
+<link rel="stylesheet" href="/pt/css/swiper.min.css?v=20201210">
+<link rel="stylesheet" href="/gw/css/animate.min.css?v=20201210">
+<link rel="stylesheet" href="/pt/css/modules.css?v=20201210">
+<script type="text/javascript" src="/pt/js/jquery-1.8.3.min.js?v=20201210"></script>
+<script type="text/javascript" src="/pt/js/common.js?v=20201210"></script>
+<script type="text/javascript" src="/pt/js/swiper.min.js?v=20201210"></script>
+<script type="text/javascript" src="/pt/js/rotatetxt.js?v=20201210"></script>
+<script type="text/javascript" src="/pt/js/lottie.min.js?v=20201210"></script>
+<script type="text/javascript" src="/res/common/js/stat.js?v=20201210"></script>
+    <style type="text/css">
+        <!--
+        body {
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            overflow: hidden;
+        }
+        -->
+    </style>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css"></head>
+<body>
+<script>
+    var hashStr = window.location.hash;
+    var umstate ;
+    try{
+        umstate =  hashStr.match(/(?:#umstate=)([^&=]+)/)[1];
+        if(umstate){
+            document.cookie="umstate="+umstate+";path=/";
+        }
+    }catch(e){}
+</script>
+<script>
+    var loginSuccessCallBackFun ;
+    /**
+     * 校验会员是否登录
+     * @returns {boolean}
+     */
+    function checkLogin(){
+        var loginFlag = false;
+
+        $.ajax({
+            type:'post',
+            async:false,
+            url:'/member_login_status.jspx?t='+new Date().getTime(),
+            success:function(data){
+                if(data.status==1){
+                    loginFlag = true;
+                }
+            }
+        });
+        return loginFlag;
+    }
+    /**
+     * 查看是否登录，并弹出登录窗口
+     * */
+    function checkLoginAndAlertLoginPop(){
+        var loginFlag =checkLogin();
+        if(!loginFlag){
+            //校验是手机还是pc
+            if(IsPC()){
+                lodingHtml("login");
+            }else{
+                window.location.href = "/mucenter/login.jspx";
+            }
+        }
+        return loginFlag;
+    }
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"];
+        var flag = true;
+        for (var i = 0; i < Agents.length; i++) {
+            if (userAgentInfo.indexOf(Agents[i]) !=-1) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    /**
+     * 查看是否登录，并弹出登录窗口
+     * */
+    function checkLoginAndAlertStore(){
+        var loginFlag =checkLogin();
+        if(!loginFlag){
+            lodingHtml("register");
+        }else{
+            window.location.href="/ucenter/purchase/productAllList.jspx"
+        }
+      
+    }
+
+    function lodingHtml(showType){
+
+        $.ajax({
+            url: '/r_member/loginhtml.jspx',
+            data:{"showType":showType},
+            type: 'post',
+            success: function(data){
+              $("body").append(data);
+            }
+        });
+    }
+
+
+    /**
+     * 查看是否登录，未登陆弹出注册窗口 ，登陆则跳转地址
+     * */
+    function checkLoginAndOpenUrl(url,target){
+        var loginFlag =checkLogin();
+        if(!loginFlag){
+            lodingHtml("register");
+        }else{
+            if(target){
+                window.open(url,target)
+            }else{
+                window.location.href=url
+            }
+        }
+
+    }
+
+    function getQueryVariable(variable)
+    {
+        if(window.location.search){
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i=0;i<vars.length;i++) {
+                var pair = vars[i].split("=");
+                if(pair[0] == variable){return pair[1];}
+            }
+        }
+        return(false);
+    }
+    $(function(){
+        //检测连接是否带参数,带参数 则弹出登录页面
+        if(document.location.search.search('showLoginProp=1')!=-1){
+            checkLoginAndAlertLoginPop();
+        }
+        var formCoupon = getQueryVariable("formCoupon");
+        if(formCoupon){
+            document.cookie="formCoupon="+formCoupon+";path=/";
+        }
+    })
+
+</script>
+
+
+<div id="previewTop" class="preview_top new-preview">
+    <div class="preview_content">
+        <div class="industry_detail fl">
+            <div class="industry_hd">
+                <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编号：</font></font><span id="serialNo"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">579a00001</font></font></span></span>
+                <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所属行业：旅游</font></font></span>
+            </div>
+            <div id="moreModules" class="more_modules" style="display: none; top: -500px;">
+                <div class="modules_content">
+                    <div id="selectContent" class="select_content">
+                        <ul>
+                            <li>
+                                <a industryid="10501" href="https://lvyou07-mb.126net.cn/" onclick="showTemp(this,'https://lvyou07-mb.126net.cn/','10501','579a00001')" title="579a00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/579a00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="9337" href="https://lvyou06-mb.126net.cn/" onclick="showTemp(this,'https://lvyou06-mb.126net.cn/','9337','370b00001')" title="370b00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/370b00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="9076" href="https://lvyou03-mb.126net.cn/" onclick="showTemp(this,'https://lvyou03-mb.126net.cn/','9076','251b00001')" title="251b00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/251b00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="9033" href="https://lvyou02-mb.126net.cn/" onclick="showTemp(this,'https://lvyou02-mb.126net.cn/','9033','238d00001')" title="238d00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/238d00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="8912" href="https://lvyou01-mb.126net.cn/" onclick="showTemp(this,'https://lvyou01-mb.126net.cn/','8912','202a00001')" title="202a00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/202a00001.jpg" alt=""><span></span></a>
+                                </li><li>
+                                <a industryid="5756" href="https://ljn-mb.126net.cn/" onclick="showTemp(this,'https://ljn-mb.126net.cn/','5756','39d00001')" title="39d00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/39d00001.jpg" alt=""><span></span></a>
+                                
+                                <a industryid="9334" href="https://lvyou05-mb.126net.cn/" onclick="showTemp(this,'https://lvyou05-mb.126net.cn/','9334','369d00001')" title="369d00001" target="sourceWeb"><img src="https://jrfcms.126net.cn/res/jrfcms/img/tpltheme/369d00001.jpg" alt=""><span></span></a>
+                                </li>
+                    </ul>
+                </div>
+                <div class="preview_buts">
+                    <a href="#" class="leftbut"></a>
+                    <a href="#" class="rightbut"></a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="versions_icons fr">
+            <span></span>
+            <a href="/mb/index.jhtml"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更多模板</font></font></a>
+        </div>
+        <div class="modules_page">
+            <a href="javascript:void(0);" class="disable" onclick="tempGoPage(this,1,-1)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上一个</font></font></a>
+            <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1/7</font></font></span>
+            <a href="javascript:void(0);" onclick="tempGoPage(this,1,1)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下一个</font></font></a>
+        </div>
+        <div class="versions_icons">
+            <input type="hidden" id="industryId" value="10501">
+            <!-- <a class="collect_template" href="javascript:void(0);" onclick=""><b></b>收藏</a> -->
+            <a href="javascript:void(0);" class="pc_icon version_current hidden" onclick="phoneShow(this);" a-name="sourceWeb"><i class="i-ico i-pc"></i><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PC版效果</font></font></em></a>
+            <a href="javascript:void(0);" class="phone_icon" onclick="phoneShow(this);" a-name="previewPhoneDiv"><i class="i-ico i-mobile"></i><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">手机版效果</font></font></em></a>
+            <a class="copy_template select-use" href="javascript:void(0);" onclick="previewUseMb()"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">精选此模板</font></font></a>
+        </div>
+    </div>
+</div>
+
+<div style="position: absolute;top:0;left:0;right:0;bottom: 0;margin: auto;">
+<iframe name="sourceWeb" id="sourceWeb" src="https://lvyou07-mb.126net.cn/" width="100%" height="100%" frameborder="no" border="0" marginwidth="0" marginheight="0" allowtransparency="yes"></iframe>
+
+
+
+<div id="previewPhoneDiv" class="preview_phone">
+    <div class="phone_code">
+        <div id="PhoneCode" data-href="https://lvyou07-mb.126net.cn//mIndex.jsp?serialNo=579a00001&amp;previewPhone=true" title="https://lvyou07-mb.126net.cn//mIndex.jsp?serialNo=579a00001&amp;previewPhone=true">
+            <p class="code_tip"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扫一扫二维码，手机预览</font></font></p>
+        <canvas width="160" height="160" style="display: none;"></canvas><img src="data:image/png;base64,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" style="display: block;"></div>
+    </div>
+    <iframe id="mobiReviewPageFrame" name="mobiReviewPageFrame" frameborder="0" width="100%" height="100%" scrolling="yes" src1="https://lvyou07-mb.126net.cn//mIndex.jsp?serialNo=579a00001&amp;previewPhone=true"></iframe>
+</div>
+</div>
+
+<!-- 新增选用 -->
+<div class="popbg"></div>
+<div class="popwin noselect-pop popwin-nobottom" id="replaceApp">
+    <div class="pop-head">
+        <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建站模板选择性</font></font></h4>
+        <a href="javascript:void(0);" class="popclose" onclick="cancelPop(this);"></a>
+    </div>
+    <div class="pop-main">
+        <div class="pop-inner">
+            <p class="temp-yy-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您希望将“</font></font><span id="templateName"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">餐饮498b00001</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ”替换到以下该站点：</font></font></p>
+            <div class="clearfix temp-yy">
+                <div class="left-temp">
+                    <div class="temp-titletip"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">新站点</font></font></div>
+                    <div>
+                        <div class="myapp_bdleft ">
+                            <div class="my_apptest_box">
+                               <img class="my_apptest" src="/pt/images/apptest_default.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="b-btn b-orange" href="Javascript:void(0)" onclick="openPayProduct();"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">应用到新的站点 </font></font><i class="i-ico"></i></a>
+                </div>
+                <div class="right-temp">
+                    <div class="temp-titletip"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">现有站点</font></font></div>
+                    <div>
+                        <div class="myapp_bdleft ">
+                            <div class="my_apptest_box">
+                               <img class="my_apptest" id="solImg" src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="b-btn" href="Javascript:void(0)" id="oneAppBtn" onclick="replaceTemplate();"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更换到现有站点 </font></font><i class="i-ico"></i></a>
+                    <a class="b-btn" href="Javascript:void(0)" id="multiAppBtn" onclick="showMultiApp();"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更换到现有站点 </font></font><i class="i-ico"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-bottom">
+        <input type="hidden" name="industryId" id="industryId">
+        <input type="hidden" name="maId" id="maIdHid">
+        <input type="hidden" name="businessId" id="businessId">
+        <input type="hidden" name="ssoLoginInterface" id="ssoLoginInterface">
+        <input id="appId" name="appId" type="hidden" value="21">
+    </div>
+</div>
+<div class="popwin selecttemp-pop popwin-nobottom" id="multiApp">
+    <div class="pop-head">
+        <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建站模板选择性</font></font></h4>
+        <a href="javascript:void(0);" class="popclose" onclick="cancelPop(this);"></a>
+    </div>
+    <div class="pop-main">
+        <div class="pop-inner">
+            <p class="selectable-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您当前有</font></font><span id="appCount"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">个站点，可以更换此模板，请选择：</font></font></p>
+            <ul class="selectable-template ">
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function cancelPop(obj){
+        $(".popbg").hide();
+        $(obj).parents(".popwin").hide();
+    }
+
+    function useMb(industryId,trimSerialNo,parentName){
+
+        if(checkLoginAndAlertLoginPop()){
+            $("#templateName").html(parentName+" "+trimSerialNo);
+            $("#industryId").val(industryId);
+            var appId = $("#appId").val();
+            // 获取当前用户自助建站应用列表
+            $(".popbg").show();
+            $.ajax({
+                type : 'post',
+                url : '/ucenter/memberApp/getZzjzApp.jspx',
+                data:{"appId":appId},
+                error : function(e){
+                    $(".popbg").hide();
+                },
+                success : function(data){
+                    if(data.count > 0 ){
+                        $("#ssoLoginInterface").val(data.ssoLoginInterface);
+                        if(data.count > 1){
+                            $("#appCount").html(data.count);
+                            $("#multiApp").find(".selectable-template").empty();
+                            var appHtml = generateAppHtml(data);
+                            $("#multiApp").find(".selectable-template").html(appHtml);
+                            $("#oneAppBtn").hide();
+                            $("#multiAppBtn").show();
+                        }else{
+                            $("#oneAppBtn").show();
+                            $("#multiAppBtn").hide();
+                        }
+
+                        $("#maIdHid").val(data.list[0].maId);
+                        $("#businessId").val(data.list[0].businessId);
+
+                        var defImg = "/r/system/100a00001/img/zizhujianzhan.png";
+                        var solImg = defImg;
+                        if( data.list[0].tplSol){
+                            solImg = 'https://jrfcms-mb.126net.cn/res/jrfcms/img/tpltheme/'+data.list[0].tplSol+'.jpg';
+                        }
+                        $("#solImg").attr("src",solImg);
+                        $("#replaceApp").show();
+                    }else{
+                        $(".popbg").hide();
+                        openPayProduct();
+                    }
+                }
+            });
+        }
+    }
+    function generateAppHtml(data){
+        var html = '';
+        var defImg = "/r/system/100a00001/img/zizhujianzhan.png";
+        var appId = $("#appId").val();
+        for(var i=0;i<data.list.length;i++){
+            var app = data.list[i];
+
+            html += '<li maIdHid="'+app.maId+'"  businessId="'+app.businessId+'">\n' +
+            '                    <div class="temp-inner clearfix">\n' +
+            // '                        <i class="i-ico i-cur"></i>\n' +
+            '                        <div class="imgbox">' +
+            '                           <div class="myapp_bdleft ">'+
+            '                               <div class="my_apptest_box">';
+            if(appId==21){
+                var solImg = defImg;
+                if(app.tplSol){
+                    solImg = 'https://jrfcms-mb.126net.cn/res/jrfcms/img/tpltheme/'+app.tplSol+'.jpg';
+                }
+                html +=
+                    '                                   <img class="my_apptest" src="'+solImg+'" alt="" />' ;
+            }else if(appId==241){
+                solImg = "/r/system/100a00001/img/qr_code_336.png";
+                if(app.manageUrl){
+                    solImg =app.manageUrl;
+                }
+                html +=
+                    '                                   <img class="my_apptest my_applet" src="'+solImg+'" alt="" />' ;
+            }
+
+            html+=
+            '                                </div>\n' +
+            '                           </div>\n' +
+            '                        </div>\n' +
+            '                        <div class="txtbox">\n' +
+            '                           <p class="temp-name">应用名称：'+app.name+'</p>\n' ;
+            if(appId==21){
+            html +=
+            '                           <p class="temp-name">站点域名：'+app.domain+'</p>\n' +
+            '                           <p class="temp-name">语言版本：中文版'+app.languageZh+'</p>\n' ;
+            }else if(appId==241){
+                var username = app.username?app.username:"";
+
+                html +=
+                    '                           <p class="temp-name">后台账号：'+username+'</p>\n' +
+                    '                           <p class="temp-name">管理地址：https://wxapp.126ego.com/store/login.do</p>\n' ;
+            }
+            html+=
+            '                           <p class="temp-name"><button class="b-btn b-orange" onclick="selectApp(this)"><span>立即更换模版</span><i class="i-ico"></i></button></p>\n' +
+            '                        </div>\n' +
+            '                    </div>\n' +
+
+            '                </li>'
+        }
+        return html;
+    }
+
+    function showMultiApp(){
+        $("#multiApp").show();
+        $("#replaceApp").hide();
+    }
+
+    function selectApp(obj){
+        var maIdHid = $(obj).parents("li").attr("maIdHid")
+        var businessId = $(obj).parents("li").attr("businessId")
+        $("#maIdHid").val(maIdHid);
+        $("#businessId").val(businessId);
+        replaceTemplate();
+    }
+
+    function replaceTemplate(){
+        var maId = $("#maIdHid").val();
+        var ssoLoginInterface = $("#ssoLoginInterface").val();
+        var businessId = $("#businessId").val();
+        $.ajax({
+            type: "POST",
+            async:false,
+            url: "/ucenter/memberApp/o_getUcenterTicket.jspx",
+            data: {"maId": maId},
+            success: function(result) {
+                if(result){
+                    var industryId = $("#industryId").val();
+                    var appId = $("#appId").val();
+                    var url = ssoLoginInterface+"?businessId="+businessId+"&token="+result;
+                    if(appId ==21){
+                        url +="&returnUrl=/index.jhtml%3FindustryId="+industryId;
+                    }else if(appId==241){
+                        url +="&tplMark="+industryId;
+                    }else if(appId==321){
+                        url +="&tplMark="+industryId;
+                    }else if(appId==322){
+                        url +="&tplMark="+industryId;
+                    }
+                    window.open(url);
+                }
+            }
+        });
+
+    }
+
+    function hbUseMb(industryId){
+        $("#industryId").val(industryId);
+        if(checkLoginAndAlertLoginPop()){
+            openPayProduct();
+        }
+    }
+
+    function openPayProduct(){
+        var appId = $("#appId").val();
+
+        var url;
+        if(appId ==21){
+            url = "/product/productDetails.jhtml?pvIds=627,382,387&pvId=627";
+        }else if(appId==241){
+            url = "/product/productDetails.jhtml?pvIds=601,583&pvId=601";
+        }else if(appId==321){
+            url = "/product/productDetails.jhtml?pvIds=761";
+        }else if(appId==322){
+            url = "/product/productDetails.jhtml?pvIds=762";
+        }
+        var industryId = $("#industryId").val();
+        url += "&industryId="+industryId;
+        window.open(url);
+    }
+
+</script>
+<div class="active_pop_bg" style="display: none;"></div>
+    <div class="active_pop_big" style="display: none;">
+        <i class="active_pop_close" onclick="closeActive(this);"></i>
+        <a href="http://www.ruiyi126.com/ryzxhd/index.jhtml"><img src="/pt/images/template/template_popbig.png" alt=""></a>
+    </div>
+    <div class="active_pop_small c-show">
+        <a href="javascript:void(0);" onclick="openActive(this);"><img src="/pt/images/template/template_popsmall.png" alt=""></a>
+    </div>
+<script src="/r/system/100a00001/js/qrcode.js"></script>
+<script>
+    $(function(){
+        var qrcode = new QRCode(document.getElementById("PhoneCode"), {
+            width : 160,
+            height : 160
+        });
+
+        qrcode.makeCode($("#PhoneCode").attr("data-href"));
+
+        init();
+        // 模板更多下拉
+        // $("#previewTop .industry_detail").mouseenter(function(){
+        //     $("#moreModules").stop().show().animate({
+        //         "top":"50px"
+        //     },300);
+        // });
+        // $("#previewTop .industry_detail").mouseleave(function(){
+        //     selectSlideUp();
+        // });
+
+
+    });
+    function showTemp(obj,domain,industryId,serialNo){
+        $("#industryId").val(industryId);
+        $("#serialNo").html(serialNo);
+
+        $("#selectContent li a").removeClass('a_checked');
+        $(obj).addClass("a_checked");
+
+        var mobiUrl = domain+"/mIndex.jsp?serialNo="+serialNo+"&previewPhone=true";
+        $("#mobiReviewPageFrame").attr("src1",mobiUrl);
+        $("#mobiReviewPageFrame").attr("src",mobiUrl);
+
+        $("#PhoneCode").find("img").remove();
+        $("#PhoneCode").find("canvas").remove();
+        var qrcode = new QRCode(document.getElementById("PhoneCode"), {
+            width : 160,
+            height : 160
+        });
+        qrcode.makeCode(mobiUrl);
+
+        selectSlideUp();
+
+    }
+
+    //手机版显示
+    function phoneShow(obj) {
+        $(obj).addClass("hidden").siblings().removeClass("hidden");
+        var nameshow = $(obj).attr("a-name");
+        var nameshow1 = $(obj).siblings('[a-name]').attr("a-name");
+        $(obj).addClass("version_current").siblings().removeClass("version_current");
+        $('#'+nameshow).show();
+        $('#'+nameshow1).hide();
+        if(nameshow == 'previewPhoneDiv'){
+            var src = $("#mobiReviewPageFrame").attr("src");
+            if(!src){
+                src = $("#mobiReviewPageFrame").attr("src1");
+                $("#mobiReviewPageFrame").attr("src",src);
+            }
+        }
+    }
+
+    function previewUseMb(){
+        var industryId = $("#industryId").val();
+        var serialNo = $("#serialNo").html();
+        useMb(industryId,serialNo,'旅游');
+    }
+
+
+
+    function selectSlideUp(){
+        $("#moreModules").stop().animate({
+            "top":'-500'
+        },300,function(){
+            $("#moreModules").hide()
+        });
+    }
+    function init(){
+        var nowimg = 0;
+        var i = $("#selectContent li").length;
+        $("#moreModules").on("click",".rightbut",function(){
+            if(!$("#selectContent ul").is(":animated")){
+                if(nowimg<i-1){
+                    nowimg ++;
+                }
+                $("#selectContent ul").animate({
+                    "left":-1000*nowimg
+                },1000);
+            }
+        });
+        $("#moreModules").on("click",".leftbut",function(){
+            var i = parseInt($("#selectContent li").length/5);
+            if(!$("#selectContent ul").is(":animated")){
+                if(nowimg>0){
+                    nowimg --;
+                }
+                $("#selectContent ul").animate({
+                    "left":-1000*nowimg
+                },1000);
+            }
+        });
+
+    }
+
+    function tempGoPage(obj,currentNum,flag){
+        if(!$(obj).hasClass("disable")){
+
+            var industryId ;
+            if(flag == 1){
+                industryId = $("#selectContent").find("ul li a").eq(currentNum-1).next().attr("industryId");
+            }else{
+                industryId = $("#selectContent").find("ul li a").eq(currentNum-1).prev().attr("industryId");
+            }
+
+            window.location.href="/view_design/v_modelPreview.jspx?industryId="+industryId;
+        }
+    }
+
+// 瑞蚁助学弹窗
+ $(function(){
+        var closeActive = getCookie("activeRYZX");
+        if(closeActive!="hide"){
+            // $(".active_pop_bg").show();
+            // $(".active_pop_big").show();
+            // $(".active_pop_small").hide();
+        }else{
+            $(".active_pop_bg").hide();
+            $(".active_pop_big").hide();
+            $(".active_pop_small").show();
+        }
+    })
+    function getCookie(cookie_name)
+    {
+        var allcookies = document.cookie;
+        var cookie_pos = allcookies.indexOf(cookie_name);   //索引的长度
+      
+        // 如果找到了索引，就代表cookie存在，
+        // 反之，就说明不存在。
+        if (cookie_pos != -1)
+        {
+            // 把cookie_pos放在值的开始，只要给值加1即可。
+            cookie_pos += cookie_name.length + 1;      //这里容易出问题，所以请大家参考的时候自己好好研究一下
+            var cookie_end = allcookies.indexOf(";", cookie_pos);
+      
+            if (cookie_end == -1)
+            {
+                cookie_end = allcookies.length;
+            }
+      
+            var value = unescape(allcookies.substring(cookie_pos, cookie_end));         //这里就可以得到你想要的cookie的值了。。。
+        }
+        return value;
+    }
+    function openActive(obj){
+        var d = new Date();
+        d.setTime(d.getTime() + (30*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie="activeRYZX=show;" + expires + ";path=/";
+        $(".active_pop_bg").show();
+            $(".active_pop_big").show();
+            $(".active_pop_small").hide();
+    }
+
+    function closeActive(obj){
+        var d = new Date();
+        d.setTime(d.getTime() + (30*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie="activeRYZX=hide;" + expires + ";path=/";
+        $(".active_pop_bg").hide();
+            $(".active_pop_big").hide();
+            $(".active_pop_small").show();
+    }
+</script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google 翻译"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">原文</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">提供更好的翻译建议</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>

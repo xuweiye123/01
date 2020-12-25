@@ -1,0 +1,204 @@
+body {
+	background-color: #eee;
+}
+
+.iframe_header {
+	width: 100%;
+	border: 0;
+}
+
+@media (min-width:576px) {
+	.iframe_header {
+		height: 25rem;
+	}
+}
+
+@media (min-width:992px) {
+	.iframe_header {
+		height: 6.5rem;
+	}
+}
+
+.iframe_header {
+	position: fixed;
+	z-index: 5;
+}
+
+.swiper-container {
+	width: 100%;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+
+#xian {
+	width: 1000px;
+	height: 5px;
+	color: #fff;
+	z-index: 1;
+	font-weight: bolder;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#wenzi {
+	color: #fff;
+	position: absolute;
+	z-index: 1;
+	text-align: center;
+}
+
+.d_none {
+	display: none;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	top: 35%;
+	left: 30%;
+}
+
+.n1 {
+	position: relative;
+}
+
+.d_none1 {
+	display: none;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	top: 45%;
+	left: 40%;
+}
+
+.n1:hover .d_none {
+	display: block;
+}
+
+@media (min-width:0) {
+	.n1:hover .d_none {
+		display: none;
+	}
+}
+
+@media (min-width:992px) {
+	.n1:hover .d_none {
+		display: block;
+	}
+}
+
+@media (min-width:0) {
+	.n1:hover .d_none1 {
+		display: none;
+	}
+}
+
+@media (min-width:992px) {
+	.n1:hover .d_none1 {
+		display: block;
+	}
+}
+
+.pl {
+	padding-left: 120px;
+}
+
+.anniu {
+	display: block;
+	width: 180px;
+	height: 40px;
+	border: 1px solid #000000;
+	color: #000000;
+	line-height: 40px;
+	text-align: center;
+	font-size: 15px;
+	text-decoration: none;
+	margin-left: 42%;
+}
+
+@media (min-width:0) {
+	.anniu {
+		margin-left: 32%;
+	}
+}
+
+@media (min-width:768px) {
+	.anniu {
+		margin-left: 39%;
+	}
+}
+
+@media (min-width:992px) {
+	.anniu {
+		margin-left: 42%;
+	}
+}
+
+.anniu:hover {
+	color: #fff;
+	background-color: rgb(182, 51, 39);
+	border: 1px solid rgb(182, 51, 39);
+	text-decoration: none;
+}
+
+.big {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.shi {
+	width: 600px;
+	height: 52px;
+	font: 14px KaiTi;
+	color: #999999;
+}
+
+#d5 {
+	position: absolute;
+	height: 560px;
+	background-color: rgb(255, 255, 255);
+	background-position: center center;
+	background-repeat: no-repeat;
+	left: 0px;
+	width: 1200px;
+}
+#d6{
+	position: absolute;
+	top: 20%;left: 38%;
+}
+@media (min-width:0) {
+	#d6 {
+		left: 13%;
+	}
+}
+
+@media (min-width:768px) {
+	#d6 {
+	  left: 25%;
+	}
+}
+
+@media (min-width:992px) {
+	#d6 {
+		left: 38%;
+	}
+}
+.d7{padding-top: 19%;}
+.d7 div{
+	width: 25%;height: 250px;
+	background-color: #FFFFFF;
+	margin: 0 auto;
+}
+.d8{width: 70px !important;height: 70px !important;border-radius: 50%;background-color: rgb(182, 51, 39) !important;margin-top: -32px !important;}
+#jingdian{background: url(http://travel-1138381.pic10.websiteonline.cn/upload/1600x1200-15.jpeg);}
+
+
+
