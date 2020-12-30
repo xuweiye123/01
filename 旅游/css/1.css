@@ -1,0 +1,29 @@
+#c1 {
+	position: relative;
+}
+
+.cc {
+	position: absolute;
+	top: 50%;
+	left: 45%;
+}
+
+#shicha {
+	height: 560px;
+	background-color: rgb(255, 255, 255);
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	
+	width: 100%;
+	position: relative;
+}
+.b7{padding-top: 10%;}
+.b7 div {
+		width: 20%;
+		height: 250px;
+		background-color: #FFFFFF;
+		margin: 0 auto;
+	}
+.btn{width: 10%;color: rgb(182, 51, 39) !important;}
+.btn-outline-danger:hover{background-color: rgb(182, 51, 39);color: #FFFFFF !important;}

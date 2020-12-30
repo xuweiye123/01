@@ -7,9 +7,18 @@ body {
 	border: 0;
 }
 
-@media (min-width:576px) {
+.iframe_footer {
+	width: 100%;
+	border: 0;
+}
+
+@media (min-width:0px) {
 	.iframe_header {
 		height: 25rem;
+	}
+
+	.iframe_footer {
+		height: 23rem;
 	}
 }
 
@@ -17,6 +26,14 @@ body {
 	.iframe_header {
 		height: 6.5rem;
 	}
+
+	.iframe_footer {
+		height: 23rem;
+	}
+}
+
+.iframe_footer {
+	display: flex;
 }
 
 .iframe_header {
@@ -170,10 +187,13 @@ body {
 	left: 0px;
 	width: 1200px;
 }
-#d6{
+
+#d6 {
 	position: absolute;
-	top: 20%;left: 38%;
+	top: 20%;
+	left: 38%;
 }
+
 @media (min-width:0) {
 	#d6 {
 		left: 13%;
@@ -182,7 +202,7 @@ body {
 
 @media (min-width:768px) {
 	#d6 {
-	  left: 25%;
+		left: 25%;
 	}
 }
 
@@ -191,14 +211,28 @@ body {
 		left: 38%;
 	}
 }
-.d7{padding-top: 19%;}
-.d7 div{
-	width: 25%;height: 250px;
+
+.d7 {
+	padding-top: 19%;
+}
+
+.d7 div {
+	width: 25%;
+	height: 250px;
 	background-color: #FFFFFF;
 	margin: 0 auto;
 }
-.d8{width: 70px !important;height: 70px !important;border-radius: 50%;background-color: rgb(182, 51, 39) !important;margin-top: -32px !important;}
-#jingdian{background: url(http://travel-1138381.pic10.websiteonline.cn/upload/1600x1200-15.jpeg);}
 
+.d8 {
+	width: 70px !important;
+	height: 70px !important;
+	border-radius: 50%;
+	background-color: rgb(182, 51, 39) !important;
+	margin-top: -32px !important;
+}
+
+#jingdian {
+	background: url(http://travel-1138381.pic10.websiteonline.cn/upload/1600x1200-15.jpeg);
+}
 
 

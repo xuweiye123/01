@@ -1,6 +1,6 @@
 .container-fluid{align-items: center;}
 body{background: rgba(0,0,0,0);}
-#d1{width: 190px;height: 35px;background-color: #FFFFFF;border-radius: 50px;margin-left: 70px;padding-top: 3px;}
+#d1{width: 190px;height: 35px;background-color: #FFFFFF;border-radius: 50px;margin-left: 10px;padding-top: 3px;}
 #int{border-radius: 5px;border: 0;text-align: center;}
 .h1 span{font: 35px NSimSun;}
 ul{padding-left: 20px;}

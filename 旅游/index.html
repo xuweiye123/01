@@ -7,7 +7,9 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/wow.min.js"></script>
 		<link rel="stylesheet" href="css/swiper-bundle.min.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 	</head>
 	<body>
@@ -36,35 +38,16 @@
 				<p>享受每一刻的感觉，欣赏每一处的风景，这就是人生</p>
 			</div>
 		</div>
-		<script src="js/swiper-bundle.min.js"></script>
-		<script>
-			var swiper = new Swiper('.swiper-container', {
-				spaceBetween: 30,
-				effect: 'fade',
-				centeredSlides: true,
-				autoplay: {
-					delay: 2500,
-					disableOnInteraction: false,
-				},
-				pagination: {
-					el: '.swiper-pagination',
-					dynamicBullets: true,
-				},
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
-			});
-		</script>
+		
 		<!-- 1 -->
-		<div class="container ">
+		<div class="container">
 			<div class="col-12 text-center py-5">
-				<h1>旅行路线</h1>
-				<p class="text-danger">精选全球较优​质机票、酒店、邮轮等旅行产品</p>
+				<h1 class=" wow slideInLeft" data-wow-duration="2s" data-wow-offset="30">旅行路线</h1>
+				<p class="text-danger wow slideInLeft" data-wow-duration="2s" data-wow-offset="30">精选全球较优​质机票、酒店、邮轮等旅行产品</p>
 			</div>
 			<div class="row no-gutters">
 				<div class="col-4">
-					<div class="pr-1 n1"><img class="w-100"  src="http://travel-1138381.pic10.websiteonline.cn/upload/butupic.jpg">
+					<div class="pr-1 n1 wow slideInLeft" data-wow-duration="1s" data-wow-offset="30"><img class="w-100"  src="http://travel-1138381.pic10.websiteonline.cn/upload/butupic.jpg">
 					<div class="d_none">
 						<h1>国内线路</h1>
 						<p>Domestic route</p>
@@ -72,7 +55,7 @@
 					</div>
 				</div>
 				<div class="col-4">
-					<div class="pr-1 n1"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/5_07.jpg">
+					<div class="pr-1 n1 wow bounceInDown" data-wow-duration="2s" data-wow-offset="30"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/5_07.jpg">
 					<div class="d_none">
 						<h1>国外线路</h1>
 						<p>Foreign route</p>
@@ -80,7 +63,7 @@
 					</div>
 				</div>
 				<div class="col-4">
-					<div class="pr-1 n1"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/4_05.jpg">
+					<div class="pr-1 n1  wow slideInRight" data-wow-duration="1s" data-wow-offset="30"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/4_05.jpg">
 					<div class="d_none">
 						<h1>自由行</h1>
 						<p>Independent travel</p>
@@ -88,7 +71,7 @@
 					</div>
 				</div>
 				<div class="col-4">
-					<div class="pr-1 pt-1 n1"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/2_05.jpg">
+					<div class="pr-1 pt-1 n1 wow slideInLeft" data-wow-duration="1s" data-wow-offset="30"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/2_05.jpg">
 					<div class="d_none">
 						<h1>较热线路</h1>
 						<p>Latest route</p>
@@ -96,7 +79,7 @@
 					</div>
 				</div>
 				<div class="col-8">
-					<div class="pt-1 n1"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/tj1_12.jpg">
+					<div class="pt-1 n1 wow slideInRight" data-wow-duration="1s" data-wow-offset="30"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/tj1_12.jpg">
 					<div class="d_none1">
 						<h1>推荐线路</h1>
 						<p>Recommended route</p>
@@ -127,21 +110,21 @@
 						<div>
 							<h2 id="d6" class="text-white text-center font-weight-bold">为什么选择我们</h2>
 							<div class="d7 d-flex justify-content-around">
-								<div>
+								<div class="wow slideInLeft" data-wow-duration="1s"  data-wow-offset="10">
 									<div class="d8">
 										<img class="w-50 ml-3 mt-3" src="http://travel-1138381.pic10.websiteonline.cn/upload/k85e.png" >
 									</div>
 									<p class="text-center pt-5">精心挑选的酒店</p>
 									<p class="mx-3 text-center small text-muted">提供全新的定制旅游路线和酒店住宿，让您旅行更安心。</p>
 								</div>
-								<div>
+								<div class="wow bounceInUp" data-wow-duration="2s"  data-wow-offset="10" >
 									<div class="d8">
 										<img class="w-50 ml-3 mt-3" src="http://travel-1138381.pic10.websiteonline.cn/upload/14s1.png" >
 									</div>
 									<p class="text-center pt-5">一流的服务</p>
 									<p class="mx-5 text-center small text-muted">多条旅游路线供您选择，一站式服务提供让您旅行更安心。</p>
 								</div>
-								<div>
+								<div class=" wow lightSpeedIn" data-wow-duration="1s"  data-wow-offset="10" >
 									<div class="d8">
 										<img class="w-50 ml-3 mt-3" src="http://travel-1138381.pic10.websiteonline.cn/upload/o0g2.png" >
 									</div>
@@ -156,22 +139,22 @@
 						<br>
 						<br>
 						<div class="row">
-							<div class="col-3 text-center">
+							<div class="col-3 text-center wow slideInLeft" data-wow-duration="1s" data-wow-offset="30">
 								<img src="http://travel-1138381.pic10.websiteonline.cn/upload/zlz7.png" >
 								<p class="h1 font-weight-bold">70,101</p>
 								<p class="small text-muted">出游人数</p>
 							</div>
-							<div class="col-3 text-center">
+							<div class="col-3 text-center wow bounceInUp" data-wow-duration="2s" data-wow-offset="30">
 								<img src="http://travel-1138381.pic10.websiteonline.cn/upload/1tb1.png" >
 								<p class="h1 font-weight-bold">109</p>
 								<p class="small text-muted">神奇之旅</p>
 							</div>
-							<div class="col-3 text-center">
+							<div class="col-3 text-center wow bounceInDown"  data-wow-duration="2s" data-wow-offset="30">
 								<img src="http://travel-1138381.pic10.websiteonline.cn/upload/vi1a.png" >
 								<p class="h1 font-weight-bold">98</p>
 								<p class="small text-muted">客户满意度</p>
 							</div>
-							<div class="col-3 text-center">
+							<div class="col-3 text-center wow slideInRight" data-wow-duration="1s" data-wow-offset="30">
 								<img src="http://travel-1138381.pic10.websiteonline.cn/upload/48qh.png" >
 								<p class="h1 font-weight-bold">10,976</p>
 								<p class="small text-muted">支持的情况</p>
@@ -179,8 +162,8 @@
 						</div>
 						<!-- 1212 -->
 						<div class="col-12 text-center">
-							<p class="h3 font-weight-bold pt-5">新闻中心</p>
-							<p class="small text-muted text-center pb-5">NEWS</p>
+							<p class="h3 font-weight-bold pt-5 wow slideInLeft" data-wow-duration="2s" data-wow-offset="30">新闻中心</p>
+							<p class="small text-muted text-center pb-5 wow slideInRight" data-wow-duration="2s" data-wow-offset="30">NEWS</p>
 						</div>
 						<!--  -->
 						<div class="row no-gutters">
@@ -208,49 +191,73 @@
 						<!--  -->
 						<div class="container-fluid" id="jingdian">
 							<div class="text-center pb-5">
-								<h2 class="text-white pt-5">热门景点</h2>
-								<p class="text-muted small">精选全球较优​质机票、酒店、邮轮等旅行产品</p>
+								<h2 class="text-white pt-5 wow slideInLeft" data-wow-duration="2s" data-wow-offset="30">热门景点</h2>
+								<p class="text-muted small wow slideInRight"  data-wow-duration="2s" data-wow-offset="30">精选全球较优​质机票、酒店、邮轮等旅行产品</p>
 							</div>
 							<div class="row">
 								<div class="col-3">
-									<div><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp1.jpg" ></div>
-								<p class="text-center text-white pt-2">海外西线</p>
+									<div  class="wow slideInLeft" data-wow-duration="0.5s" data-wow-offset="30"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp1.jpg" ></div>
+								<p class="text-center text-white pt-2 wow slideInLeft" data-wow-duration="1.5s" data-wow-offset="30">海外西线</p>
 								</div>
 								<div class="col-3">
-									<div><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp2.jpg" ></div>
-								<p class="text-center text-white pt-2">毛里求斯</p>
+									<div class="wow bounceInDown" data-wow-duration="2s" data-wow-offset="30"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp2.jpg" ></div>
+								<p class="text-center text-white pt-2 wow bounceInRight" data-wow-duration="2s" data-wow-offset="30">毛里求斯</p>
 								</div>
 								<div class="col-3">
-									<div><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp3.jpg" ></div>
-								<p class="text-center text-white pt-2">欧洲浪漫之旅</p>
+									<div class="wow bounceInDown" data-wow-duration="2s" data-wow-offset="30"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp3.jpg" ></div>
+								<p class="text-center text-white pt-2 wow bounceInDown" data-wow-duration="2s" data-wow-offset="30">欧洲浪漫之旅</p>
 								</div>
 								<div class="col-3">
-									<div><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp4.jpg" ></div>
-								<p class="text-center text-white pt-2">埃菲尔铁塔</p>
+									<div class="wow slideInRight" data-wow-duration="0.5s" data-wow-offset="30"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp4.jpg" ></div>
+								<p class="text-center text-white pt-2 wow slideInRight" data-wow-duration="1s" data-wow-offset="30">埃菲尔铁塔</p>
 								</div>
 								<div class="col-3">
-									<div><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp8.jpg" ></div>
-								<p class="text-center text-white pt-2">马尔代夫</p>
+									<div class="wow flipInX" data-wow-duration="2s" data-wow-offset="30"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp8.jpg" ></div>
+								<p class="text-center text-white pt-2 wow slideInLeft" data-wow-duration="2s" data-wow-offset="30">马尔代夫</p>
 								</div>
 								<div class="col-3">
-									<div><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp5.jpg" ></div>
-								<p class="text-center text-white pt-2">马尼拉长滩岛</p>
+									<div class="wow bounceInUp" data-wow-duration="2s" data-wow-offset="30"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp5.jpg" ></div>
+								<p class="text-center text-white pt-2 wow bounceInUp" data-wow-duration="2s" data-wow-offset="30">马尼拉长滩岛</p>
 								</div>
 								<div class="col-3">
-									<div><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp6.jpg" ></div>
-								<p class="text-center text-white pt-2">香港迪士尼</p>
+									<div class="wow bounceInUp" data-wow-duration="2s" data-wow-offset="30"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp6.jpg" ></div>
+								<p class="text-center text-white pt-2 wow bounceInUp" data-wow-duration="2s" data-wow-offset="30">香港迪士尼</p>
 								</div>
 								<div class="col-3">
-									<div><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp7.jpg" ></div>
-								<p class="text-center text-white pt-2">夏威夷</p>
+									<div class="wow flipInX" data-wow-duration="2s" data-wow-offset="30"><img class="w-100" src="http://travel-1138381.pic10.websiteonline.cn/upload/cp7.jpg" ></div>
+								<p class="text-center text-white pt-2 wow slideInLef" data-wow-duration="2s" data-wow-offset="30">夏威夷</p>
 								</div>
 							</div>
 						</div>
+							<!-- 脚部文件 -->
+							<footer>
+								<iframe class="iframe_footer" src="footer.html"  scrolling="no"></iframe>
+							</footer>
 					</div>
 					
 				</div>
-				
-			</div>
 			
+			</div>
 	</body>
 </html>
+<script src="js/swiper-bundle.min.js"></script>
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				spaceBetween: 30,
+				effect: 'fade',
+				centeredSlides: true,
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					dynamicBullets: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+			new WOW().init();
+		</script>
